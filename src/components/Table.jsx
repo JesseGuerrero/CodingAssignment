@@ -1,9 +1,8 @@
 import React from 'react';
 let contacts = require("../contacts.json")
 
-const Table = () => {
+const Table = ({ pageNumber }) => {
     const paginationLength = 10
-    let pageNumber = 1
     let contactsPage = []
     contactsPage = contacts.slice((pageNumber-1)*10, pageNumber*paginationLength)
 

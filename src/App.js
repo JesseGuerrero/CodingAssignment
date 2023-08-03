@@ -1,9 +1,19 @@
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
 import Table from "./components/Table";
 import Navigation from "./components/Navigation";
 
 function App() {
+  const [pageNumber, setPageNumber] = useState(1)
+
+  const setPageNumberFromNavigation = (pageNumber) => {
+      if(pageNumber < 1)
+          pageNumber = 1
+      if(pageNumber > 100)
+          pageNumber = 100
+      setPageNumber(pageNumber)
+  };
+
   return (
     <div className="App">
       <header>
@@ -11,8 +21,8 @@ function App() {
       </header>
       <body>
       <h1>Contact Information</h1>
-        <Table />
-        <Navigation />
+        <Table pageNumber={pageNumber}/>
+        <Navigation setPageNumber={setPageNumberFromNavigation}/>
       </body>
     </div>
   );
