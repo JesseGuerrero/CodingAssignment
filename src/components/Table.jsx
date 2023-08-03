@@ -2,6 +2,11 @@ import React from 'react';
 let contacts = require("../contacts.json")
 
 const Table = () => {
+    const paginationLength = 10
+    let pageNumber = 1
+    let contactsPage = []
+    contactsPage = contacts.slice((pageNumber-1)*10, pageNumber*paginationLength)
+
     return (
         <div style={{width: "100%"}}>
             <table style={{margin: "0 auto"}} border="1">
@@ -13,7 +18,7 @@ const Table = () => {
                     <th>Phone Number</th>
                     <th>Country Code</th>
                 </tr>
-                    {contacts.map((contact) => (
+                    {contactsPage.map((contact) => (
                         <tr>
                             <td>{contact.id}</td>
                             <td>{contact.firstName}</td>
