@@ -2,6 +2,7 @@ import {useState} from 'react'
 import './App.css';
 import Table from "./components/Table";
 import Navigation from "./components/Navigation";
+import SortFilter from "./components/SortFilter";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(1)
@@ -20,7 +21,8 @@ function App() {
         <title>Coding Assignment</title>
       </header>
       <body>
-      <h1>Contact Information</h1>
+      <h1 style={{marginBottom: "-0.05em"}}>Contact Information</h1>
+        <SortFilter />
         <Table pageNumber={pageNumber}/>
         <Navigation setPageNumber={setPageNumberFromNavigation} pageNumber={pageNumber}/>
       </body>
