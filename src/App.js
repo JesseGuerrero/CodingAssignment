@@ -22,7 +22,7 @@ function App() {
       <body>
       <h1>Contact Information</h1>
         <Table pageNumber={pageNumber}/>
-        <Navigation setPageNumber={setPageNumberFromNavigation}/>
+        <Navigation setPageNumber={setPageNumberFromNavigation} pageNumber={pageNumber}/>
       </body>
     </div>
   );
