@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Table from "./components/Table";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <body>
       <h1>Contact Information</h1>
         <Table />
+        <Navigation />
       </body>
     </div>
   );
