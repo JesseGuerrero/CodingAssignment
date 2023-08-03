@@ -13,14 +13,14 @@ const Table = () => {
                     <th>Phone Number</th>
                     <th>Country Code</th>
                 </tr>
-                    {contacts.map((contact, index) => (
+                    {contacts.map((contact) => (
                         <tr>
                             <td>{contact.id}</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
-                            <td>Data 1</td>
-                            <td>Data 2</td>
-                            <td>Data 3</td>
+                            <td>{contact.firstName}</td>
+                            <td>{contact.lastName}</td>
+                            <td>{contact.email}</td>
+                            <td>{contact.phoneNumber}</td>
+                            <td>{contact.countryCode}</td>
                         </tr>
                     ))}
             </table>
