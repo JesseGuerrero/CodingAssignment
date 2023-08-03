@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-size: 1em;
+  background-color: #282c34;
+  color: white;
+}
+
+body h1 {
+  font-size: 1.5em;
+}
+
