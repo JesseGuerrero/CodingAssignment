@@ -1,4 +1,5 @@
 import React from 'react';
+let contacts = require("../contacts.json")
 
 const Table = () => {
     return (
@@ -13,7 +14,7 @@ const Table = () => {
                     <th>Country Code</th>
                 </tr>
                 <tr>
-                    <td>Data 1</td>
+                    <td>{contacts[0].id}</td>
                     <td>Data 2</td>
                     <td>Data 3</td>
                     <td>Data 1</td>
