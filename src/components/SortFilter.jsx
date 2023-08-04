@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SortFilter = ({ setSortType, sortType }) => {
+const SortFilter = ({ setSortType, sortType, setFilterInput }) => {
     const oppositeSort = (sort) => {
         return sort == "ascending" ? "descending" : "ascending"
     }
@@ -10,12 +10,14 @@ const SortFilter = ({ setSortType, sortType }) => {
         setSortType(getOppositeSort)
     }
 
-    //Filter by last name
+    const handleInputFilter = (event) => {
+        setFilterInput(event.target.value)
+    }
 
     return (
         <div style={{width: "100%"}}>
             <div>
-                Make <a onClick={toggleSort}>{getOppositeSort}</a>
+                Make <a onClick={toggleSort}>{getOppositeSort}</a> <input type={"text"} onChange={handleInputFilter} placeholder={"Filter Last Name"}/>
             </div>
         </div>
     );
