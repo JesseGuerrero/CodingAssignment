@@ -1,12 +1,14 @@
 import React from 'react';
 
-const SortFilter = ({ }) => {
-    //Ascending/Descending
+const SortFilter = ({ setSortType, sortType }) => {
+    //Toggle Sort
+    //getOppositeSort
     //Filter by last name
+
     return (
         <div style={{width: "100%"}}>
-            <div style={{margin: "0 auto"}} border="1">
-                sort section here
+            <div border="1">
+                Make <a>{sortType}</a>
             </div>
         </div>
     );
