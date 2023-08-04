@@ -4,15 +4,18 @@ const SortFilter = ({ setSortType, sortType }) => {
     const oppositeSort = (sort) => {
         return sort == "ascending" ? "descending" : "ascending"
     }
-    const getSortText = oppositeSort(sortType)
+    const getOppositeSort = oppositeSort(sortType)
 
-    //Toggle Sort
+    const toggleSort = () => {
+        setSortType(getOppositeSort)
+    }
+
     //Filter by last name
 
     return (
         <div style={{width: "100%"}}>
-            <div border="1">
-                Make <a>{getSortText}</a>
+            <div>
+                Make <a onClick={toggleSort}>{getOppositeSort}</a>
             </div>
         </div>
     );
