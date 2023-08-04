@@ -19,14 +19,23 @@ function App() {
       setPageNumber(pageNumber)
   };
 
+  const setSortTypeFromSortFilter = (sortType) => {
+      if(sortType == "ascending")
+          contacts.sort((a, b) => a.id - b.id)
+      if(sortType == "descending")
+          contacts.sort((a, b) => b.id - a.id)
+      setSortType(sortType)
+  }
+
   return (
     <div className="App">
       <header>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Coding Assignment</title>
       </header>
       <body>
-      <h1 style={{marginBottom: "-0.05em"}}>Contact Information</h1>
-        <SortFilter setSortType={setSortType} sortType={sortType}/>
+      <h1>Contact Information</h1>
+        <SortFilter setSortType={setSortTypeFromSortFilter} sortType={sortType}/>
         <Table pageNumber={pageNumber} contacts={contacts}/>
         <Navigation setPageNumber={setPageNumberFromNavigation} pageNumber={pageNumber}/>
       </body>

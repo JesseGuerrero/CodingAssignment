@@ -37,17 +37,23 @@
   }
 }
 
+a {
+  cursor: pointer;
+}
+
 body {
   font-size: 1em;
   background-color: #282c34;
   color: white;
 }
 
+@media (max-width: 600px) {
+  body {
+    font-size: 0.5em;
+  }
+}
+
 body h1 {
   font-size: 1.5em;
+  margin-bottom: -0.05em;
 }
-
-a {
-  cursor: pointer;
-}
-
