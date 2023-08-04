@@ -37,11 +37,17 @@
   }
 }
 
+th {
+  background-color: #161b23;
+}
+
 a {
   cursor: pointer;
 }
 
 body {
+  font-family: Arial, sans-serif;
+  padding: 0 1em 1em 1em;
   font-size: 1em;
   background-color: #282c34;
   color: white;
@@ -53,7 +59,41 @@ body {
   }
 }
 
+@media (max-width: 300px) {
+  body {
+    font-size: 0.25em;
+  }
+}
+
 body h1 {
   font-size: 1.5em;
   margin-bottom: -0.05em;
+}
+
+.table-container {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* This makes it look cleaner */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+
+a:hover {
+  color: #DDDDDD;
 }

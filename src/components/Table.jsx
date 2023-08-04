@@ -7,7 +7,7 @@ const Table = ({ pageNumber, contacts }) => {
     contactsPage = contacts.slice((pageNumber-1)*10, pageNumber*paginationLength)
 
     return (
-        <div style={{width: "100%"}}>
+        <div className={"table-container"} style={{width: "100%"}}>
             <table style={{margin: "0 auto"}} border="1">
                 <tr>
                     <th>Contact ID</th>
